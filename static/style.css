@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #172033;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.topbar {
+    height: 72px;
+    background: #ffffff;
+    border-bottom: 1px solid #d9e0e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.topbar p {
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22a06b;
+}
+
+/* MAIN DASHBOARD */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns:
+        260px
+        minmax(500px, 1fr)
+        330px;
+
+    height: calc(100vh - 72px);
+}
+
+/* PANELS */
+
+.panel {
+    background: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.left-panel {
+    border-right: 1px solid #d9e0e8;
+}
+
+.right-panel {
+    border-left: 1px solid #d9e0e8;
+}
+
+.panel h2,
+.map-panel h2 {
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* DISRUPTION BUTTONS */
+
+.disruption-btn {
+    width: 100%;
+
+    padding: 11px 12px;
+    margin-bottom: 9px;
+
+    background: #ffffff;
+
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+
+    text-align: left;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.disruption-btn:hover {
+    background: #f3f6fa;
+}
+
+/* SECTION */
+
+.section-title {
+    margin-top: 26px;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    padding: 12px;
+
+    background: #f6f8fb;
+
+    border: 1px solid #e1e6ed;
+    border-radius: 8px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+/* MAP */
+
+.map-panel {
+    padding: 20px;
+
+    background: #eef2f7;
+}
+
+.map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.map-header p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.map-legend {
+    display: flex;
+    gap: 14px;
+
+    font-size: 11px;
+    color: #596273;
+}
+
+.map-legend span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+.green {
+    background: #22a06b;
+}
+
+.amber {
+    background: #d99b21;
+}
+
+.red {
+    background: #d64545;
+}
+
+/* MAP PLACEHOLDER */
+
+#map {
+    width: 100%;
+    height: calc(100vh - 145px);
+
+    min-height: 450px;
+
+    background: #dfe7ef;
+
+    border: 1px solid #d1d9e3;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #687386;
+    font-size: 16px;
+}
+
+/* BLAST RADIUS */
+
+.blast-card {
+    background: #f8fafc;
+
+    border: 1px solid #dce3eb;
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    margin-bottom: 22px;
+}
+
+.blast-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.alert-level {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.blast-number {
+    margin-top: 10px;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.blast-number span {
+    font-size: 15px;
+    color: #7b8492;
+}
+
+.blast-bar {
+    height: 7px;
+
+    background: #e2e7ed;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+}
+
+.blast-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #22a06b;
+
+    border-radius: 10px;
+}
+
+.blast-factors {
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    color: #687386;
+}
+
+.explain-btn {
+    margin-top: 12px;
+
+    border: none;
+    background: none;
+
+    color: #52677d;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .dashboard {
+        grid-template-columns:
+            220px
+            minmax(400px, 1fr)
+            280px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+        border: none;
+        border-bottom: 1px solid #d9e0e8;
+    }
+
+    #map {
+        height: 500px;
+    }
+
+}

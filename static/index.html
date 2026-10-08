@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIPPLE - Logistics Command Center</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="topbar">
+            <div>
+                <h1>RIPPLE</h1>
+                <p>Disruption-Aware Logistics Planning</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                System Online
+            </div>
+        </header>
+
+        <main class="dashboard">
+
+            <section class="panel">
+                <h2>Disruptions</h2>
+
+                <button>Close Adyar Bridge</button>
+                <button>Break Down V2</button>
+                <button>Urgent Hospital Order</button>
+
+                <h2>System Status</h2>
+                <p id="backend-status">Checking backend...</p>
+            </section>
+
+            <section class="map-panel">
+                <h2>Route Map</h2>
+
+                <div class="map-placeholder">
+                    Chennai Logistics Map
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Recovery Options</h2>
+
+                <p>No disruption active.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

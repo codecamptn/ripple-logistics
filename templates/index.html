@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RIPPLE - Logistics Command Center</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- TOP HEADER -->
+        <header class="topbar">
+
+            <div>
+                <h1>RIPPLE</h1>
+                <p>Disruption-Aware Logistics Planning</p>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Online
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <main class="dashboard">
+
+            <!-- LEFT PANEL -->
+            <aside class="panel left-panel">
+
+                <h2>Disruptions</h2>
+
+                <button class="disruption-btn">
+                    Close Adyar Bridge
+                </button>
+
+                <button class="disruption-btn">
+                    Break Down V2
+                </button>
+
+                <button class="disruption-btn">
+                    Urgent Hospital Order
+                </button>
+
+
+                <h2 class="section-title">
+                    Needs Attention
+                </h2>
+
+                <div class="empty-state">
+                    No active disruptions
+                </div>
+
+
+                <h2 class="section-title">
+                    Decision Log
+                </h2>
+
+                <div class="empty-state">
+                    No decisions yet
+                </div>
+
+            </aside>
+
+
+            <!-- CENTER MAP -->
+            <section class="map-panel">
+
+                <div class="map-header">
+
+                    <div>
+                        <h2>Route Map</h2>
+                        <p>Chennai Logistics Network</p>
+                    </div>
+
+                    <div class="map-legend">
+
+                        <span>
+                            <i class="legend-dot green"></i>
+                            On Track
+                        </span>
+
+                        <span>
+                            <i class="legend-dot amber"></i>
+                            Affected
+                        </span>
+
+                        <span>
+                            <i class="legend-dot red"></i>
+                            Late
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div id="map">
+                    Chennai Map Loading...
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT PANEL -->
+            <aside class="panel right-panel">
+
+                <div class="blast-card">
+
+                    <div class="blast-title">
+                        <span>BLAST RADIUS</span>
+                        <span class="alert-level">
+                            ALL CLEAR
+                        </span>
+                    </div>
+
+                    <div class="blast-number">
+                        0
+                        <span>/ 100</span>
+                    </div>
+
+                    <div class="blast-bar">
+                        <div class="blast-fill"></div>
+                    </div>
+
+                    <p class="blast-factors">
+                        No active impact
+                    </p>
+
+                    <button class="explain-btn">
+                        How is this calculated?
+                    </button>
+
+                </div>
+
+
+                <h2 class="section-title">
+                    Recovery Options
+                </h2>
+
+                <div class="empty-state">
+                    No recovery required.
+                </div>
+
+            </aside>
+
+        </main>
+
+    </div>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
